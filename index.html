@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Krithika ❤️</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      overflow: hidden;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+
+    .container {
+      z-index: 2;
+      padding: 30px;
+      max-width: 700px;
+      animation: fadeIn 2s ease;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    p {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
+
+    button {
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
+      background: white;
+      color: #ff4f81;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+
+    .hidden-message {
+      margin-top: 25px;
+      display: none;
+      font-size: 1.2rem;
+      animation: fadeIn 1s ease;
+    }
+
+    .heart {
+      position: absolute;
+      bottom: -50px;
+      color: rgba(255,255,255,0.8);
+      animation: floatUp linear infinite;
+      user-select: none;
+    }
+
+    @keyframes floatUp {
+      from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Happy Birthday Krithika ❤️</h1>
+
+    <p>
+      You genuinely make life brighter.<br>
+      Thank you for existing, for your chaos, your smile,
+      your care, and every little moment with you.
+      <br><br>
+      Distance sucks sometimes, but you still somehow make everything feel close.
+    </p>
+
+    <button onclick="showMessage()">Click Me ✨</button>
+
+    <div class="hidden-message" id="message">
+      I love you endlessly ❤️<br><br>
+      One day we'll celebrate birthdays together instead of through screens.
+    </div>
+  </div>
+
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
+  </audio>
+
+  <script>
+    function showMessage() {
+      document.getElementById('message').style.display = 'block';
+    }
+
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerHTML = '❤️';
+
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.fontSize = Math.random() * 20 + 20 + 'px';
+      heart.style.animationDuration = Math.random() * 3 + 4 + 's';
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 7000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+
+</body>
+</html>
