@@ -1,156 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Birthday Krithika ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Happy Birthday Kri 💜</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
     }
 
-    body {
-      height: 100vh;
-      overflow: hidden;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-align: center;
-      position: relative;
+    body{
+
+      height:100vh;
+      overflow:hidden;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      background:
+      radial-gradient(circle at top,#3d1366,#120018 70%);
+
+      color:white;
+      text-align:center;
+      position:relative;
+
     }
 
-    .container {
-      z-index: 2;
-      padding: 30px;
-      max-width: 700px;
-      animation: fadeIn 2s ease;
+    .stars{
+
+      position:absolute;
+      width:100%;
+      height:100%;
+      overflow:hidden;
+      z-index:0;
+
     }
 
-    h1 {
-      font-size: 4rem;
-      margin-bottom: 20px;
-      text-shadow: 0 0 20px rgba(0,0,0,0.3);
+    .star{
+
+      position:absolute;
+      width:2px;
+      height:2px;
+      background:white;
+      border-radius:50%;
+      opacity:0.8;
+      animation:twinkle 3s infinite ease-in-out;
+
     }
 
-    p {
-      font-size: 1.3rem;
-      line-height: 1.8;
-      margin-bottom: 25px;
-    }
+    @keyframes twinkle{
 
-    button {
-      padding: 15px 30px;
-      border: none;
-      border-radius: 50px;
-      background: white;
-      color: #ff4f81;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: 0.3s;
-      font-weight: bold;
-    }
-
-    button:hover {
-      transform: scale(1.1);
-    }
-
-    .hidden-message {
-      margin-top: 25px;
-      display: none;
-      font-size: 1.2rem;
-      animation: fadeIn 1s ease;
-    }
-
-    .heart {
-      position: absolute;
-      bottom: -50px;
-      color: rgba(255,255,255,0.8);
-      animation: floatUp linear infinite;
-      user-select: none;
-    }
-
-    @keyframes floatUp {
-      from {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
+      0%,100%{
+        opacity:0.2;
       }
-      to {
-        transform: translateY(-110vh) rotate(360deg);
-        opacity: 0;
+
+      50%{
+        opacity:1;
       }
+
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .container{
+
+      position:relative;
+      z-index:2;
+
+      width:90%;
+      max-width:750px;
+
+      padding:45px;
+
+      background:rgba(255,255,255,0.08);
+
+      border:1px solid rgba(255,255,255,0.15);
+
+      backdrop-filter:blur(14px);
+
+      border-radius:35px;
+
+      box-shadow:
+      0 0 40px rgba(173,73,255,0.25);
+
+      animation:fadeIn 2s ease;
+
     }
 
-    audio {
-      display: none;
+    h1{
+
+      font-size:4.5rem;
+      margin-bottom:20px;
+
+      background:linear-gradient(
+      90deg,
+      #ffffff,
+      #e0b3ff,
+      #c77dff
+      );
+
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+
+      text-shadow:0 0 20px rgba(199,125,255,0.4);
+
     }
+
+    .subtitle{
+
+      font-size:1.3rem;
+      line-height:1.9;
+      color:#f1dcff;
+
+      margin-bottom:35px;
+
+    }
+
+    .btn{
+
+      padding:16px 40px;
+
+      border:none;
+      border-radius:60px;
+
+      background:linear-gradient(
+      90deg,
+      #b517ff,
+      #7209b7
+      );
+
+      color:white;
+
+      font-size:1rem;
+      font-weight:600;
+
+      cursor:pointer;
+
+      transition:0.4s;
+
+      box-shadow:
+      0 0 25px rgba(181,23,255,0.5);
+
+    }
+
+    .btn:hover{
+
+      transform:scale(1.08);
+
+      box-shadow:
+      0 0 35px rgba(181,23,255,0.9);
+
+    }
+
+    .hidden-message{
+
+      display:none;
+
+      margin-top:35px;
+
+      font-size:1.2rem;
+      line-height:1.9;
+
+      color:#ffe9ff;
+
+      animation:fadeIn 1.5s ease;
+
+    }
+
+    .heart{
+
+      position:absolute;
+      bottom:-50px;
+
+      animation:floatUp linear infinite;
+
+      opacity:0.8;
+
+      z-index:1;
+
+      user-select:none;
+
+    }
+
+    @keyframes floatUp{
+
+      from{
+
+        transform:
+        translateY(0)
+        rotate(0deg);
+
+        opacity:1;
+
+      }
+
+      to{
+
+        transform:
+        translateY(-110vh)
+        rotate(360deg);
+
+        opacity:0;
+
+      }
+
+    }
+
+    @keyframes fadeIn{
+
+      from{
+
+        opacity:0;
+        transform:translateY(20px);
+
+      }
+
+      to{
+
+        opacity:1;
+        transform:translateY(0);
+
+      }
+
+    }
+
+    .glow{
+
+      position:absolute;
+
+      width:300px;
+      height:300px;
+
+      background:#8a2be2;
+
+      filter:blur(120px);
+
+      opacity:0.25;
+
+      border-radius:50%;
+
+      z-index:0;
+
+    }
+
+    .glow1{
+
+      top:-80px;
+      left:-80px;
+
+    }
+
+    .glow2{
+
+      bottom:-100px;
+      right:-100px;
+
+    }
+
+    @media(max-width:768px){
+
+      h1{
+        font-size:3rem;
+      }
+
+      .subtitle{
+        font-size:1.05rem;
+      }
+
+      .container{
+        padding:30px;
+      }
+
+    }
+
   </style>
+
 </head>
 
 <body>
 
+  <div class="glow glow1"></div>
+  <div class="glow glow2"></div>
+
+  <div class="stars" id="stars"></div>
+
   <div class="container">
-    <h1>Happy Birthday Krithika ❤️</h1>
 
-    <p>
-      You genuinely make life brighter.<br>
-      Thank you for existing, for your chaos, your smile,
-      your care, and every little moment with you.
+    <h1>Happy Birthday Kri 💜</h1>
+
+    <div class="subtitle">
+
+      You somehow became my safest place,
+      my favorite person,
+      and the best part of even the worst days.
       <br><br>
-      Distance sucks sometimes, but you still somehow make everything feel close.
-    </p>
 
-    <button onclick="showMessage()">Click Me ✨</button>
+      Distance is stupid,
+      but loving you is ridiculously easy.
+
+    </div>
+
+    <button class="btn" onclick="playMusic()">
+
+      Open Your Surprise ✨
+
+    </button>
 
     <div class="hidden-message" id="message">
-      I love you endlessly ❤️<br><br>
-      One day we'll celebrate birthdays together instead of through screens.
+
+      I genuinely can't wait for the day
+      we celebrate together instead of through screens.
+
+      <br><br>
+
+      Until then,
+      thank you for existing,
+      for loving me,
+      and for being you.
+
+      <br><br>
+
+      I love you endlessly 💜
+
     </div>
+
   </div>
 
-  <audio autoplay loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
+  <audio id="bgmusic" loop>
+
+    <source src="song.mp3" type="audio/mp3">
+
   </audio>
 
   <script>
-    function showMessage() {
-      document.getElementById('message').style.display = 'block';
+
+    function playMusic(){
+
+      document
+      .getElementById("message")
+      .style.display = "block";
+
+      const music =
+      document.getElementById("bgmusic");
+
+      music.play();
+
     }
 
-    function createHeart() {
-      const heart = document.createElement('div');
-      heart.classList.add('heart');
-      heart.innerHTML = '❤️';
+    function createHeart(){
 
-      heart.style.left = Math.random() * 100 + 'vw';
-      heart.style.fontSize = Math.random() * 20 + 20 + 'px';
-      heart.style.animationDuration = Math.random() * 3 + 4 + 's';
+      const heart =
+      document.createElement("div");
+
+      heart.classList.add("heart");
+
+      heart.innerHTML = "💜";
+
+      heart.style.left =
+      Math.random() * 100 + "vw";
+
+      heart.style.fontSize =
+      Math.random() * 25 + 15 + "px";
+
+      heart.style.animationDuration =
+      Math.random() * 4 + 4 + "s";
 
       document.body.appendChild(heart);
 
       setTimeout(() => {
+
         heart.remove();
-      }, 7000);
+
+      },8000);
+
     }
 
-    setInterval(createHeart, 300);
+    setInterval(createHeart,250);
+
+    function createStars(){
+
+      const starsContainer =
+      document.getElementById("stars");
+
+      for(let i=0;i<120;i++){
+
+        const star =
+        document.createElement("div");
+
+        star.classList.add("star");
+
+        star.style.left =
+        Math.random()*100 + "%";
+
+        star.style.top =
+        Math.random()*100 + "%";
+
+        star.style.animationDelay =
+        Math.random()*3 + "s";
+
+        starsContainer.appendChild(star);
+
+      }
+
+    }
+
+    createStars();
+
   </script>
 
 </body>
+
 </html>
